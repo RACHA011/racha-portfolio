@@ -1,0 +1,254 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.home {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.color {
+  color: #00f;
+}
+
+.span-button {
+  font-size: 1.2em;
+}
+
+.span-button1 {
+  padding: 0.9em;
+  border-radius: 10px;
+  background: #00f;
+  text-decoration: none;
+  margin: 1em;
+  color: #fff;
+}
+
+.span-button2 {
+  padding: 0.9em;
+  text-decoration: none;
+  border-radius: 10px;
+  background: #fff;
+  color: #000000;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.section1 {
+  background-color: #000000;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.insidesection1,
+.insidesection2 {
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.insidesection2 img {
+  width: 100vh;
+  height: 100vh;
+  display: block;
+  object-fit: cover;
+}
+
+.blurry-picture {
+  img {
+    object-fit: cover;
+    transition: filter 0.3s ease-in-out;
+  }
+}
+
+.blurry-picture:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: radial-gradient(circle, transparent 50%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: 1;
+  transition: background 0.4s ease-in-out;
+}
+
+.blurry-picture:hover:before {
+  background: radial-gradient(circle, transparent 70%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.blurry-picture:hover img {
+  filter: blur(2px);
+}
+
+.section2 {
+  background-color: #060606;
+  color: white;
+}
+
+.section3 {
+  background-color: #000;
+  color: white;
+}
+
+.section4 {
+  background-color: #090909;
+  color: white;
+}
+
+.content {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+}
+
+.content h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.content h1 b {
+  background: linear-gradient(135deg, rgba(138, 43, 226, 1) 0%, rgba(75, 0, 130, 1) 50%, rgba(0, 0, 139, 1) 100%);
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2em;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.project-item {
+  position: relative;
+  width: auto;
+  max-height: 40vh;
+}
+
+.project-image {
+  width: auto;
+  max-height: 40vh;
+  display: block;
+  border-radius: 30px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border: 1px solid #413f42;
+}
+
+.image__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-family: 'quicksand', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 30px;
+}
+
+.project-item:hover .image__overlay {
+  opacity: 1;
+}
+
+.image__title {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.image__description {
+  font-size: 1.2em;
+  margin-top: 0.25em;
+  text-align: center;
+}
+
+.headingstyle {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 600;
+  font-size: 3.5rem;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.container-section {
+  left: 50%;
+}
+
+@media (max-width: 1260px) {
+  .insidesection1,
+  .insidesection2 {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .span-button {
+    font-size: 1em;
+  }
+
+  .insidesection2 img {
+    max-width: auto;
+    height: auto;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 760px) {
+  .insidesection1,
+  .insidesection2 {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .insidesection2 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .insidesection1 p {
+    font-size: 0.9em;
+  }
+
+  .content h1 {
+    font-size: 1.5em;
+  }
+
+  .content p {
+    font-size: 0.9em;
+  }
+}

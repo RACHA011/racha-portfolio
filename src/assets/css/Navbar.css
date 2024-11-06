@@ -1,0 +1,28 @@
+/* Navbar styling */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: top 0.5s;
+  }
+  
+  .navbar-hidden {
+    top: -80px; /* Adjust as needed */
+  }
+  
+  .navbar-brand img {
+    width: 30px;
+    margin-right: 10px;
+  }
+  
+  .nav-link {
+    color: white !important;
+  }
+  
+  .nav-link:hover {
+    color: #f0ad4e !important;
+  }
+  
+  .list-inline .nav-link {
+    display: inline-block;
+    padding: 0 10px;
+  }
+  
