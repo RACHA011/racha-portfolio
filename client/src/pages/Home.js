@@ -1,11 +1,30 @@
-import React from 'react';
-import '../assets/css/Home.scss';
+import React, { useEffect, useState } from 'react';
 import '../assets/css/Home.css';
+import '../assets/css/Home.scss';
 import image from '../assets/images/bg.jpg';
-import Image from '../images/images';
 import handleSubmit from '../handleemail/handleSubmit';
 
 function Home() {
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const response = await fetch('/getprojects', { method: 'GET' });
+        if (!response.ok) {
+          throw new Error('Failed to fetch projects');
+        }
+        const data = await response.json();
+        console.log(data);
+        setProjects(data); // Update state with fetched projects
+      } catch (error) {
+        console.error('Error fetching projects:', error);
+      }
+    };
+
+    fetchProjects();
+  }, []); // Empty dependency array means this runs once after the component mounts
+
   return (
     <div className="home">
       <section className="section section1">
@@ -43,7 +62,7 @@ function Home() {
             <span style={{ color: 'blueviolet' }}>&lt;</span>My latest projects<span style={{ color: 'blueviolet' }}>&gt;</span>
           </h1>
           <div className="project-container">
-            {Image.map((imgSrc, index) => (
+            {projects.map((imgSrc, index) => (
               <div key={index} className="project-item">
                 <img src={imgSrc.photo} alt={`project-${index}`} className="project-image" />
                 <div className="image__overlay">
@@ -55,7 +74,7 @@ function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    more info
+                    visit the website
                   </a>
                 </div>
               </div>
