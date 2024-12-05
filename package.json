@@ -2,7 +2,7 @@
   "name": "port",
   "version": "1.0.0",
   "scripts": {
-    "start": "concurrently \"npm run start --prefix client\" \"npm run start --prefix server\"",
+    "start": "concurrently \"npm start --prefix client\" \"npm start --prefix server\"",
     "start-client": "cd client && npm start",
     "start-server": "cd server && npm start"
   },
