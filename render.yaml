@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: client
+    env: node
+    buildCommand: |
+      npm install
+      npm install --prefix client
+    startCommand: |
+      npm run start --prefix client
+    envVars:
+      - key: NODE_ENV
+        value: production
+    staticPublishPath: client/build
+
+  - type: web
+    name: server
+    env: node
+    buildCommand: |
+      npm install
+      npm install --prefix server
+    startCommand: |
+      npm run start --prefix server
+    envVars:
+      - key: NODE_ENV
+        value: production
+    region: us
+    manualDeploy: true
+
+  # Optional: Add a database service (if applicable)
+  # - type: database
+  #   name: my-database
+  #   plan: free
