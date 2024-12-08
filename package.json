@@ -2,9 +2,9 @@
   "name": "portfolio",
   "version": "1.0.0",
   "scripts": {
-    "start": "concurrently \"npm start --prefix client\" \"npm start --prefix server\"",
+    "start": "concurrently \"npm start --prefix client\" \"node server.js --prefix server\"",
     "start-client": "cd client && npm start",
-    "start-server": "cd server && npm start"
+    "start-server": "cd server && node server.js"
   },
   "devDependencies": {
     "concurrently": "^9.1.0"
