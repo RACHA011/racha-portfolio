@@ -23,7 +23,7 @@ function Projects() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    more info
+                    view website
                   </a>
                 </div>
               </div>
