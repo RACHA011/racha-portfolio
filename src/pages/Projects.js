@@ -10,6 +10,7 @@ function Projects() {
           <h1 className="headingstyle">
             <span style={{ color: 'blueviolet' }}>&lt;</span>My projects<span style={{ color: 'blueviolet' }}>&gt;</span>
           </h1>
+          <p>vist my github to see my other projects</p>
           <div className="project-container">
             {Image.map((imgSrc, index) => (
               <div key={index} className="project-item">
@@ -30,6 +31,12 @@ function Projects() {
             ))}
           </div>
         </div>
+        <br />
+        <p>
+          <a className="nav-link" href="https://github.com/RACHA011/" target="_blank" rel="noopener noreferrer">
+            vist my github to see my other projects
+          </a>
+        </p>
       </section>
     </div>
   );

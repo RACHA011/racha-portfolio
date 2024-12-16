@@ -43,7 +43,7 @@ function Home() {
             <span style={{ color: 'blueviolet' }}>&lt;</span>My latest projects<span style={{ color: 'blueviolet' }}>&gt;</span>
           </h1>
           <div className="project-container">
-            {Image.map((imgSrc, index) => (
+            {Image.slice(0, 4).map((imgSrc, index) => (
               <div key={index} className="project-item">
                 <img src={imgSrc.photo} alt={`project-${index}`} className="project-image" />
                 <div className="image__overlay">
