@@ -3,8 +3,9 @@ import emailjs from 'emailjs-com';
 const handleSubmit = (event) => {
   event.preventDefault();
 
+  console.log(event.target);
   emailjs
-    .sendForm('service_0htpxyk', 'template_867h6us', event.target, 'F9HKN7u04Vqdu6l3_')
+    .sendForm('service_31qs9q2', 'template_867h6us', event.target, 'F9HKN7u04Vqdu6l3_')
     .then((result) => {
       console.log(result.text);
       alert('Email sent successfully!');
