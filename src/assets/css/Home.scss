@@ -1,12 +1,36 @@
 .frame {
+  display: none;
   position: absolute;
   left: 20%;
   width: 50vh;
   height: 50vh;
   border-radius: 2px;
   background-color: #070707;
-
   filter: contrast(25);
+}
+/* Hide the frame on smaller devices */
+@media (max-width: 600px) {
+  .frame {
+    display: none;
+  }
+
+  .section3 {
+    padding: 20px; 
+    text-align: center; 
+  }
+
+  .content {
+    max-width: 100%; /* Use full width for content */
+    padding: 15px; /* Add some padding for a clean look */
+  }
+
+  .content h1 {
+    font-size: 1.8em; /* Adjust font size for smaller screens */
+  }
+
+  .content p {
+    font-size: 1em; /* Adjust paragraph size */
+  }
 }
 
 .center {

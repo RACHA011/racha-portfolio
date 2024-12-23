@@ -85,7 +85,9 @@ function Home() {
                 ))}
               </div>
             </div>
-            <div className="content container-section" style={{ marginLeft: '420px' }}>
+
+            <div className="content container-section">
+              {/* <div className="content container-section" style={{ marginLeft: '420px' }}> */}
               <p>
                 Hello! I&apos;m Racha, a third-year Computer Science student specializing in back-end web development. I completed a
                 comprehensive Full Stack course on Udemy, covering Java, JSP, Hibernate, Spring, RESTful API, Spring Boot, JavaScript, and

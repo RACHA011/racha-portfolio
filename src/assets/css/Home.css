@@ -9,6 +9,13 @@ body {
   overflow-x: hidden;
 }
 
+@media (max-width: 600px) {
+  .home {
+    min-width: 700px;
+    /* Make the content wider than the viewport */
+  }
+}
+
 .color {
   color: #00f;
 }
@@ -47,6 +54,7 @@ body {
   padding: 20px;
   box-sizing: border-box;
 }
+
 
 .section1 {
   background-color: #000000;
@@ -206,10 +214,11 @@ body {
 }
 
 .container-section {
-  left: 50%;
+  /* left: 50%; */
 }
 
 @media (max-width: 1260px) {
+
   .insidesection1,
   .insidesection2 {
     flex: 1 1 100%;
@@ -228,6 +237,7 @@ body {
 }
 
 @media (max-width: 760px) {
+
   .insidesection1,
   .insidesection2 {
     flex: 1 1 100%;
